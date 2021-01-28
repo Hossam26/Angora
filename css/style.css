@@ -18,7 +18,7 @@ body{
 
 
 
-.nav-link{
+.nav-link{ 
     transition: color 0.3s;
 }
 .nav-link:hover,.social a:hover, .carousel-control-prev:hover, .carousel-control-next:hover, .progress-bar,
@@ -32,6 +32,9 @@ body{
     border-bottom: rgba(128, 128, 128, 0.3) 1px solid;
     
 
+}
+.nav-link .active{
+    color: #f25454 !important;
 }
 .navbar-brand img{
     width:140px;
@@ -65,31 +68,31 @@ body{
     transition: all 0.3s;
 }
 
-.one .carousel-inner{
+.slide .carousel-inner{
     height: 100%;
     color: white;
+    text-align: center;
     }
 .carousel-inner img {
     height: 100vh;
   display: block;
 }
-.one .carousel-item h1{
+.slide .carousel-item h1{
     color: white;
     transform: translateX(65rem);
     transition: all 1s;
 }
-.one .carousel-item.active h1{
+.slide .carousel-item.active h1{
    transform: translateX(0rem);    
 }
-.one .carousel-inner h1{
+.slide .carousel-inner h1{
     font-size: 4rem;
     font-weight: 900;
    line-height: 3.5rem;
   }
-  .cont{
+  .change-pos-dim{
     height: 100%;
     width: 100%;
-    text-align: center;
     top: 0;
     left: 0;
   }
@@ -123,32 +126,24 @@ body{
       padding-left: 0.5rem;
       background-color: black;
   }
-  .tn1::before{
+  .changeBack::before{
       content: "";
       width: 2.4rem;
       height: 3.1rem;
       position: absolute;
       left: -5rem;
-      top: -1.5rem;
+      top: -1.3rem;
      background-color: white;
      transition: all 0.5s;
   }
-  .tn2::before{
-    content: "";
-    width: 2.4rem;
-    height: 3.1rem;
-    position: absolute;
-    left: -5rem;
-    top: -1.4rem;
-   background-color: white;
-   transition: all 0.5s;
-}
-  .carousel-control-prev:hover .tn1::before{
+  .carousel-control-next .changeBack::before{
+    top: -1.4=3rem;
+  }
+
+  .carousel-control-prev:hover .changeBack::before, .carousel-control-next:hover .changeBack::before{
       left:0rem;
   }
-  .carousel-control-next:hover .tn2::before{
-    left:0rem;
-}
+
 .scroll{
     width: 1.7rem;
     height: 2.8rem;
@@ -201,6 +196,18 @@ opacity: 0.1;
     height: 0.3rem !important;
     width: 30rem;   
 }
+#brand{
+    width: 3%;
+}
+#design{
+    width: 5%;
+}
+#graphic{
+    width: 7%;
+}
+#dev{
+    width: 2%;
+}
 #about h6{
     font-weight: 600;
 }
@@ -233,7 +240,7 @@ opacity: 0.1;
 }
 #team .profile img{
     transition: all 0.5s;
-}
+}   
 .layer-d a{
     margin: 0rem 0.8rem;
 }
