@@ -47,7 +47,11 @@ document.addEventListener("scroll",function(){
         $("#dev").animate({ "width": "80%" }, 2)
     }
     for (var i=0;i<nav.length;i++){
-        if($(window).scrollTop()>sectionsTop[i]-sectionsTop[i]*0.2){
+        if(window.outerWidth<=600&& $(window).scrollTop()>sectionsTop[i]-sectionsTop[i]*0.1){
+            $(".nav-link").css("color","rgba(0,0,0,.9)")
+            $(nav[i]).css("color","#f25454")
+          }
+       else if($(window).scrollTop()>sectionsTop[i]-sectionsTop[i]*0.2){
             $(".nav-link").css("color","rgba(0,0,0,.9)")
             $(nav[i]).css("color","#f25454")
                 
